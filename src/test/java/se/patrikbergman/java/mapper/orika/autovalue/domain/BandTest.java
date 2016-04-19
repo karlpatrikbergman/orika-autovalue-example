@@ -9,8 +9,8 @@ public class BandTest {
     @Test
     public void testBand() {
         Band band = Band.builder().name("Judas Priest").rockFactor(8).build();
-        assertEquals("Judas Priest", band.name());
-        assertEquals(8, band.rockFactor());
+        assertEquals("Judas Priest", band.getName());
+        assertEquals(8, band.getRockFactor());
 
         // You probably don't need to write assertions like these; just illustrating.
         assertTrue(Band.builder().name("Judas Priest").rockFactor(8).build().equals(band));

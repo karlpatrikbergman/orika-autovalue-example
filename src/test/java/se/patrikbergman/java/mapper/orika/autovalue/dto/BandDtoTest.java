@@ -10,15 +10,15 @@ public class BandDtoTest {
 
     @Test
     public void testBandDto() {
-        BandDto bandDto = BandDto.builder().name("Judas Priest").rockValue(8).build();
-        assertEquals("Judas Priest", bandDto.name());
-        assertEquals(8, bandDto.rockValue());
+        BandDto bandDto = BandDto.builder().name("Judas Priest").rockFactor(8).build();
+        assertEquals("Judas Priest", bandDto.getName());
+        assertEquals(8, bandDto.getRockFactor());
 
-        assertTrue(BandDto.builder().name("Judas Priest").rockValue(8).build().equals(bandDto));
-        assertFalse(BandDto.builder().name("Abba").rockValue(7).build().equals(bandDto));
-        assertFalse(BandDto.builder().name("Judas Priest").rockValue(2).build().equals(bandDto));
+        assertTrue(BandDto.builder().name("Judas Priest").rockFactor(8).build().equals(bandDto));
+        assertFalse(BandDto.builder().name("Abba").rockFactor(7).build().equals(bandDto));
+        assertFalse(BandDto.builder().name("Judas Priest").rockFactor(2).build().equals(bandDto));
 
-        assertEquals("BandDto{name=Judas Priest, rockValue=8}", bandDto.toString());
+        assertEquals("BandDto{name=Judas Priest, rockFactor=8}", bandDto.toString());
     }
 }
 
