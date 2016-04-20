@@ -12,7 +12,9 @@
 //    private static final BoundMapperFacade<Band, BandDto> boundMapper;
 //
 //    static {
-//        final MapperFactory mapperFactory = new DefaultMapperFactory.Builder().build();
+//        final MapperFactory mapperFactory = new DefaultMapperFactory.Builder().useAutoMapping(false).build();
+//        mapperFactory.registerConcreteType(Band.getGeneratedClass(), Band.class);
+//        mapperFactory.registerConcreteType(BandDto.getGeneratedClass(), BandDto.class);
 //        mapperFactory.classMap(Band.class, BandDto.class)
 //                .field("name", "name")
 //                .field("rockFactor", "rockFactor")

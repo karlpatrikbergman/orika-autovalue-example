@@ -1,12 +1,18 @@
-package se.patrikbergman.java.mapper.orika.autovalue.dto;
+package se.patrikbergman.java.bandapp.controller.dto;
 
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class BandDtoTest {
+
+//    @Test
+//    public void testBandDto() {
+//        BandDto bandDto = BandDto.create("Judas Priest", 8);
+//        assertEquals("Judas Priest", bandDto.getName());
+//        assertEquals(8, bandDto.getRockFactor());
+//        assertEquals("BandDto{name=Judas Priest, rockFactor=8}", bandDto.toString());
+//    }
 
     @Test
     public void testBandDto() {
