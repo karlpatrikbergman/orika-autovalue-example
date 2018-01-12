@@ -4,11 +4,13 @@ import ma.glasnost.orika.BoundMapperFacade;
 import ma.glasnost.orika.MapperFacade;
 import ma.glasnost.orika.MapperFactory;
 import ma.glasnost.orika.impl.DefaultMapperFactory;
+import ma.glasnost.orika.metadata.TypeFactory;
 import org.junit.Before;
 import org.junit.Test;
 import se.patrikbergman.java.bandapp.controller.dto.BandDto;
 import se.patrikbergman.java.bandapp.controller.dto.BandJavaBeanDto;
 import se.patrikbergman.java.bandapp.service.domain.Band;
+import se.patrikbergman.java.mapping.BandDtoFactory;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -45,14 +47,10 @@ public class BandMappingTest {
     }
 
     //Can't get this to work!!
-//    @Test
-//    public void foo() {
-//        mapperFactory.classMap(Band.class, BandDto.class)
-//                .field("name", "name")
-//                .field("rockFactor", "rockFactor")
-//                .byDefault()
-//                .register();
-//        mapperFactory.registerObjectFactory(new BandDtoFactory(), TypeFactory.valueOf(BandDto.class));
-//        BandDto bandDto = mapperFacade.map(sourceBand, BandDto.class);
-//    }
+    @Test
+    public void foo() {
+        mapperFactory.registerObjectFactory(new BandDtoFactory(), TypeFactory.valueOf(BandDto.class));
+        mapperFacade = mapperFactory.getMapperFacade();
+        BandDto bandDto = mapperFacade.map(sourceBand, BandDto.class);
+    }
 }

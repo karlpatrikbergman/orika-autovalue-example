@@ -60,7 +60,7 @@ public class BrandMappingTest {
     }
 
     @Test
-    public void brandDtoToBrand__UsingBoundMapperFacade() {
+    public void brandDtoToBrand_UsingBoundMapperFacade() {
         Brand brand = boundMapperFacade.mapReverse(sourceBrandDto);
         assertNotNull(brand);
         assertEquals(BRAND_NAME, brand.getName());
